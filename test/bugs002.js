@@ -1,39 +1,40 @@
-var assert = require('assert');
-var wordwrap = require('../');
+require('should');
+const wordwrap = require('../');
 
-// Exposes bugs in wordwrap 0.0.2
-exports.bug1 = function() {
-    var text = 'I love u\n\n\n';
-    var res = wordwrap(10)(text);
-    assert.equal(res, 'I love u\n\n\n');
-};
+describe('bugs issue #3', () => {
+    it('bug1', () => {
+        const text = 'I love u\n\n\n';
+        let res = wordwrap(10)(text);
+        res.should.equal('I love u\n\n\n');
+    });
 
-exports.bug2 = function() {
-    var text = 'I hug you, my friend';
-    var res = wordwrap(10)(text);
-    assert.equal(res, 'I hug you,\nmy friend');
-};
+    it('bug2', () => {
+        const text = 'I hug you, my friend';
+        const res = wordwrap(10)(text);
+        res.should.equal('I hug you,\nmy friend');
+    });
 
-exports.bug3 = function() {
-    var text = 'I love u\n\n\n';
-    var res = wordwrap.hard(10)(text);
-    assert.equal(res, 'I love u\n\n\n');
-};
+    it('bug3', () => {
+        const text = 'I love u\n\n\n';
+        const res = wordwrap.hard(10)(text);
+        res.should.equal('I love u\n\n\n');
+    });
 
-exports.bug4 = function() {
-    var text = 'I hug you, my friend';
-    var res = wordwrap.hard(10)(text);
-    assert.equal(res, 'I hug you,\nmy friend');
-};
+    it('bug4', () => {
+        const text = 'I hug you, my friend';
+        const res = wordwrap.hard(10)(text);
+        res.should.equal('I hug you,\nmy friend');
+    });
 
-exports.bug5 = function() {
-    var text = '12345678910';
-    var res = wordwrap(10)(text);
-    assert.equal(res, '12345678910');
-};
+    it('bug5', () => {
+        const text = '12345678910';
+        const res = wordwrap(10)(text);
+        res.should.equal('12345678910');
+    });
 
-exports.bug6 = function() {
-    var text = '\n12345678910\n';
-    var res = wordwrap(1, 11)(text);
-    assert.equal(res, ' \n 12345678910\n ');
-};
+    it('bug6', () => {
+        const text = '\n12345678910\n';
+        const res = wordwrap(1, 11)(text);
+        res.should.equal(' \n 12345678910\n ');
+    });
+});
