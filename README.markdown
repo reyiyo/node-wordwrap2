@@ -3,6 +3,8 @@ wordwrap
 
 Wrap your words.
 
+This repo is a copy from the excellent lib by @substack at https://github.com/substack/node-wordwrap. This new repo has some bugfixes and PRs merged and is released as a new module on npm as the original one seems unmaintained.
+
 example
 =======
 
