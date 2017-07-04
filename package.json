@@ -1,26 +1,32 @@
 {
-    "name": "wordwrap",
+    "name": "wordwrap2",
     "description": "Wrap those words. Show them at what columns to start and stop.",
-    "version": "1.0.0",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/substack/node-wordwrap.git"
-    },
-    "files": [
-        "index.js"
-    ],
-    "main": "./index.js",
+    "version": "2.0.0",
     "keywords": [
         "word",
         "wrap",
         "rule",
         "format",
-        "column"
+        "column",
+        "cut"
     ],
+    "homepage": "https://github.com/reyiyo/node-wordwrap2#wordwrap",
+    "bugs": {
+        "url": "https://github.com/reyiyo/node-wordwrap2/issues"
+    },
+    "license": "MIT",
+    "files": [
+        "index.js"
+    ],
+    "main": "./index.js",
     "directories": {
         "lib": ".",
         "example": "example",
         "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/reyiyo/node-wordwrap2.git"
     },
     "scripts": {
         "test": "mocha test/",
@@ -31,10 +37,25 @@
         "should": "^11.2.1",
         "strip-ansi": "^4.0.0"
     },
-    "license": "MIT",
     "author": {
-        "name": "James Halliday",
-        "email": "mail@substack.net",
-        "url": "http://substack.net"
-    }
+        "name": "Sergio Orbe",
+        "email": "reyiyo@gmail.com"
+    },
+    "contributors": [
+        {
+            "name": "James Halliday",
+            "email": "mail@substack.net",
+            "url": "http://substack.net"
+        },
+        {
+            "name": "Nathan Wittstock",
+            "email": "nate@milkandtang.com",
+            "url": "http://milkandtang.com"
+        },
+        {
+            "name": "Feng Qiu",
+            "email": "me@pagerendered.in",
+            "url": "http://www.pagerendered.in"
+        }
+    ]
 }
