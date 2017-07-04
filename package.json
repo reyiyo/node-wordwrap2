@@ -6,6 +6,9 @@
         "type": "git",
         "url": "git://github.com/substack/node-wordwrap.git"
     },
+    "files": [
+        "index.js"
+    ],
     "main": "./index.js",
     "keywords": [
         "word",
@@ -25,7 +28,8 @@
     },
     "devDependencies": {
         "mocha": "^3.4.2",
-        "should": "^11.2.1"
+        "should": "^11.2.1",
+        "strip-ansi": "^4.0.0"
     },
     "license": "MIT",
     "author": {
